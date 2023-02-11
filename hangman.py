@@ -16,7 +16,7 @@ def hangman():
     lives = 6
     word = get_valid_word(words)
     word_letters = set(word) # letters in the word
-    alphabet = set(string.ascii_uppercase)
+    alphabet = set(string.ascii_lowercase)
     used_letters = set() # what the user has guessed
 
     # getting user input
@@ -29,7 +29,7 @@ def hangman():
         word_list = [letter if letter in used_letters else '-' for letter in word]
         print('Current word:', ' '.join(word_list))
 
-        user_letter = input('Guess a letter: ').upper()
+        user_letter = input('Guess a letter: ').lower()
         if user_letter in alphabet - used_letters:
             used_letters.add(user_letter)
             if user_letter in word_letters:
