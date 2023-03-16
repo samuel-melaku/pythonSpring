@@ -1,0 +1,3 @@
+def function_name(arg1, arg2, argN):
+    # Function's code goes here...
+    pass
